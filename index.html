@@ -3,78 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💐 Chúc Mừng Ngày 20/10 💐</title>
+    <title>💐 Chúc Mừng 20/10 Yêu Thương 💐</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
-            background: linear-gradient(135deg, #ff758c, #ff7eb3);
-            height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            overflow: hidden;
+            padding: 20px;
         }
         .card {
-            background: white;
-            padding: 35px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(220, 90, 130, 0.25);
             text-align: center;
-            max-width: 400px;
-            width: 90%;
+            max-width: 480px;
+            width: 100%;
+            border: 2px solid #ffe1e9;
         }
         h1 {
             color: #d63031;
-            font-size: 26px;
-            margin-bottom: 10px;
+            font-size: 24px;
+            margin-bottom: 8px;
         }
-        p {
-            color: #555;
-            font-size: 16px;
-            line-height: 1.5;
+        .flower-img {
+            width: 100%;
+            max-height: 380px;
+            object-fit: contain;
+            border-radius: 16px;
+            margin: 15px 0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
-        .btn {
-            background: #ff4757;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 20px;
-            cursor: pointer;
+        .flower-img:hover {
+            transform: scale(1.02);
+        }
+        .message-box {
+            background: #fff0f4;
+            padding: 20px;
+            border-radius: 16px;
+            border-left: 4px solid #ff4757;
+            text-align: justify;
+            color: #4a4a4a;
+            font-size: 15.5px;
+            line-height: 1.7;
             margin-top: 15px;
-            transition: 0.3s;
-            font-weight: bold;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
         }
-        .btn:hover {
-            background: #ff6b81;
-        }
-        #wish {
-            display: none;
-            margin-top: 20px;
+        .heart-icon {
             color: #e84393;
-            font-weight: bold;
-            font-size: 17px;
-            animation: fadeIn 1s;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            font-size: 20px;
         }
     </style>
 </head>
 <body>
+
     <div class="card">
-        <h1>🌸 Chúc Mừng 20/10 🌸</h1>
-        <p>Nhấn vào nút bên dưới để mở món quà bất ngờ nhé!</p>
-        <button class="btn" onclick="showWish()">Mở Quà 🎁</button>
-        <div id="wish">Chúc bạn một ngày 20/10 ngập tràn niềm vui, luôn xinh đẹp, rạng rỡ, hạnh phúc và thành công rực rỡ trong cuộc sống! ✨💖</div>
+        <h1>✨ Happy Vietnamese Women's Day ✨</h1>
+        <p style="color: #888; font-size: 14px; margin-top: 0;">🌸 20.10 - Gửi ngàn yêu thương 🌸</p>
+        
+        <!-- Hiển thị hình ảnh 123.jpg -->
+        <img src="123.jpg" alt="Bó hoa yêu thương" class="flower-img">
+
+        <!-- Lời chúc ý nghĩa -->
+        <div class="message-box">
+            <span class="heart-icon">💖</span> <strong>Chúc Em</strong> một ngày 20/10 thật ý nghĩa, xinh đẹp và ngập tràn niềm vui, mạnh khoẻ cũng như luôn tươi cười rạng rỡ hơn hiện tại nhoaa. 
+            <br><br>
+            🙏 Nguyện xin Thiên Chúa và mẹ Maria ban cho em và gia đình luôn được bình an, hạnh phúc và gặt hái được nhiều hồng ân trong công việc cũng như cuộc sống! ✨🕊️
+        </div>
     </div>
 
-    <script>
-        function showWish() {
-            document.getElementById('wish').style.display = 'block';
-        }
-    </script>
 </body>
 </html>
