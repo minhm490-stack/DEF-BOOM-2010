@@ -33,6 +33,27 @@
             font-size: 24px;
             margin-bottom: 8px;
         }
+        .btn {
+            background: linear-gradient(45deg, #ff4757, #ff6b81);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            font-size: 18px;
+            border-radius: 30px;
+            cursor: pointer;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            box-shadow: 0 6px 15px rgba(255, 71, 87, 0.35);
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 71, 87, 0.45);
+        }
+        #content {
+            display: none;
+            animation: fadeIn 0.8s ease-in-out;
+        }
         .flower-img {
             width: 100%;
             max-height: 380px;
@@ -40,10 +61,6 @@
             border-radius: 16px;
             margin: 15px 0;
             box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        .flower-img:hover {
-            transform: scale(1.02);
         }
         .message-box {
             background: #fff0f4;
@@ -55,11 +72,14 @@
             font-size: 15.5px;
             line-height: 1.7;
             margin-top: 15px;
-            box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
         }
         .heart-icon {
             color: #e84393;
             font-size: 20px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -69,16 +89,26 @@
         <h1>✨ Happy Vietnamese Women's Day ✨</h1>
         <p style="color: #888; font-size: 14px; margin-top: 0;">🌸 20.10 - Gửi ngàn yêu thương 🌸</p>
         
-        <!-- Hiển thị hình ảnh 123.jpg -->
-        <img src="123.jpg" alt="Bó hoa yêu thương" class="flower-img">
+        <!-- Nút bấm mở món quà -->
+        <button id="giftBtn" class="btn" onclick="openGift()">Mở Quà Bất Ngờ 🎁</button>
 
-        <!-- Lời chúc ý nghĩa -->
-        <div class="message-box">
-            <span class="heart-icon">💖</span> <strong>Chúc Em</strong> một ngày 20/10 thật ý nghĩa, xinh đẹp và ngập tràn niềm vui, mạnh khoẻ cũng như luôn tươi cười rạng rỡ hơn hiện tại nhoaa. 
-            <br><br>
-            🙏 Nguyện xin Thiên Chúa và mẹ Maria ban cho em và gia đình luôn được bình an, hạnh phúc và gặt hái được nhiều hồng ân trong công việc cũng như cuộc sống! ✨🕊️
+        <!-- Nội dung ẩn (ảnh + lời chúc) chỉ hiện ra khi bấm nút -->
+        <div id="content">
+            <img src="123.jpg" alt="Bó hoa yêu thương" class="flower-img">
+
+            <div class="message-box">
+                <span class="heart-icon">💖</span> <strong>Chúc Em</strong> một ngày 20/10 thật ý nghĩa, xinh đẹp và ngập tràn niềm vui, mạnh khoẻ cũng như luôn tươi cười rạng rỡ hơn hiện tại nhoaa. 
+                <br><br>
+                🙏 Nguyện xin Thiên Chúa và mẹ Maria ban cho em và gia đình luôn được bình an, hạnh phúc và gặt hái được nhiều hồng ân trong công việc cũng như cuộc sống! ✨🕊️
+            </div>
         </div>
     </div>
 
+    <script>
+        function openGift() {
+            document.getElementById('giftBtn').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
